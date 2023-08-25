@@ -1,6 +1,31 @@
 nav ul {
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-  }
-  
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.container {
+  display: flex;
+  flex-direction:inherit ;
+  margin-top: 100px
+}
+
+.image {
+  flex:2;
+  margin-right: -300px;
+  position: relative;
+  margin-top: center;
+}
+
+.text {
+  flex:2;
+  margin-top: -20px;
+  padding-left:-20000px;
+}
+.nav{
+  display: inline-block;
+  margin-bottom: 5.2em;
+}
