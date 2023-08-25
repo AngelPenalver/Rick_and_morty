@@ -54,17 +54,17 @@ const Login = () => {
             <form className={style.li} onSubmit={submitHandler}>
 
 
-                <li><label htmlFor='email' >Correo electronico</label></li>
+                <li><label htmlFor='email' >Correo electronico</label>
                 <input type='text' placeholder="Correo electronico" name="email" onChange={handleChange} className={style.input} />
-                {errores.email && <p>{errores.email}</p>}
-                <li><label htmlFor='password'>Constraseña</label></li>
+                {errores.email && <p>{errores.email}</p>}</li>
+                <li><label htmlFor='password'>Constraseña</label>
                 <input type='password' placeholder="Contraseña" name="password" onChange={handleChange} className={style.input} />
-                {errores.password && <p>{errores.password}</p>}
+                {errores.password && <p>{errores.password}</p>}</li>
 
                 {Object.keys(errores).length === 0 ? (
                     <NavLink to='/Home'><button className={style.button}>INGRESAR</button></NavLink>
                 ) : (
-                    <button disabled className={style.button}>INGRESAR</button>
+                    <button disabled className={style.button}>INGRESAR</button  >
                 )}
 
 

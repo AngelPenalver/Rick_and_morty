@@ -2,8 +2,8 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import Nav from "./Nav";
-import style from './Nav.module.css'
+import Nav from '../Nav/Nav';
+import style from '../Nav/Nav.module.css'
 
 const Detail = (props) => {
   const [character, setCharacter] = useState({});

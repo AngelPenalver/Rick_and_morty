@@ -1,11 +1,11 @@
 import './App.css';
 import axios from 'axios';
-import Cards from './components/Cards.jsx';
+import Cards from './components/Cards/Cards.jsx';
 import React, { useState } from 'react';
-import Nav from './components/Nav';
+import Nav from './components/Nav/Nav';
 import { Routes, Route } from 'react-router-dom';
-import About from './components/About';
-import Detail from './components/Detail'
+import About from './components/About/About';
+import Detail from './components/Detail/Detail'
 import Login from './components/Login/Login'
 import { useLocation } from 'react-router-dom';
 function App() {
@@ -32,7 +32,7 @@ function App() {
   return (
     <div className='App'>
       {
-        location.pathname !== '/' && <Nav onSearch={onSearch} />
+        location.pathname !== '/' && <Nav onSearch={onSearch}/>
       }
 
       <Routes>
