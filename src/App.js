@@ -1,45 +1,45 @@
 import './App.css';
-import axios from 'axios';
 import Cards from './components/Cards/Cards.jsx';
 import React, { useState } from 'react';
 import Nav from './components/Nav/Nav';
 import { Routes, Route } from 'react-router-dom';
 import About from './components/About/About';
 import Detail from './components/Detail/Detail'
-import Login from './components/Login/Login'
-import { useLocation } from 'react-router-dom';
+import Form from './components/Login/Login'
+import { useLocation, useNavigate } from 'react-router-dom';
+import Favorites from './components/Favorites/Favorites';
+import { useEffect } from 'react';
+import useCharacters from './components/SearchBar/onSearch/onSearch';
 function App() {
-  const [characters, setCharacters] = useState([]);
+  
+  const {onSearch,characters, onClose} = useCharacters();
   const location = useLocation();
-  const onClose = (id) => {
-    setCharacters((oldChars) => oldChars.filter((char) => char.id !== parseInt(id)));
+  
+  const navigate = useNavigate();
+  const [access, setAccess] = useState(false);
+  const EMAIL = 'ejemplo@gmail.com';
+  const PASSWORD = 'cotrasena';
+  
+  function login(setInput) {
+    if (setInput.password === PASSWORD && setInput.email === EMAIL) {
+      setAccess(true);
+      navigate('/home');
+    }
   }
-  const onSearch = (id) => {
-    axios(`https://rickandmortyapi.com/api/character/${id}`).then(({ data }) => {
-      if (data.name) {
-        setCharacters((oldChars) => {
-          if (oldChars.some((char) => char.id === data.id)) {
-            return oldChars;
-          } else {
-            return [...oldChars, data];
-          }
-        });
-      } else {
-        window.alert('¡No hay personajes con este ID!');
-      }
-    });
-  }
+  // useEffect(() => {
+  //   !access && navigate('/');
+  // }, [access]);
   return (
     <div className='App'>
       {
-        location.pathname !== '/' && <Nav onSearch={onSearch}/>
+        location.pathname !== '/' && <Nav onSearch={onSearch} />
       }
-
       <Routes>
         <Route path='/home' element={
           <Cards characters={characters} onClose={onClose} />
         } />
-        <Route path='/' element={<Login />} />
+        <Route path='/Favorites' element={<Favorites />} />
+        <Route path='/' element={<Form login={login} />} />
         <Route path="/detail/:id" element={<Detail onSearch={onSearch} />} />
         <Route path='/About' element={<><Nav onSearch={onSearch} /> <About /> </>} />
       </Routes>
