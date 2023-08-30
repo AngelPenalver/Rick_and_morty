@@ -1,9 +1,8 @@
 const About = () => {
     return (
-        <>
-            <h1>Creada por Ángel Peñalver</h1>
-            <p></p>
-        </>
+     <h1>
+        Creada por Angel
+     </h1>
     )
 }
 export default About;

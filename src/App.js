@@ -22,7 +22,7 @@ const EMAIL = 'ejemplo@gmail.com';
 const PASSWORD = 'gabriel';
 
 function login(userData) {
-  // console.log(userData)
+  
    if (userData.password === PASSWORD && userData.email === EMAIL) {
       setAccess(true);
       navigate('/home');
@@ -33,7 +33,7 @@ function login(userData) {
     !access && navigate('/');
  }, [access]);
   return (
-    <div className='App'>
+    <div className='App' >
       {
         location.pathname !== '/' && <Nav onSearch={onSearch} />
       }
@@ -44,7 +44,7 @@ function login(userData) {
         <Route path='/Favorites' element={<Favorites />} />
         <Route path='/' element={<Form login={login} />} />
         <Route path="/detail/:id" element={<Detail onSearch={onSearch} />} />
-        <Route path='/About' element={<><Nav onSearch={onSearch} /> <About /> </>} />
+        <Route path='/About' element={<About />} />
       </Routes>
     </div>
   );

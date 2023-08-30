@@ -1,9 +1,7 @@
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
-import Nav from '../Nav/Nav';
-import style from '../Nav/Nav.module.css'
+
 
 const Detail = (props) => {
   const [character, setCharacter] = useState({});
@@ -21,12 +19,12 @@ const Detail = (props) => {
   }, [id]);
 
   return (
-    <div className={style.container}>
-      <NavLink to='/home' ><Nav onSearch={props.onSearch} /></NavLink>
-      <div className={style.image}>
+    <div >
+      {/* <NavLink to='/home' ><Nav onSearch={props.onSearch} /></NavLink> 5 */}
+      <div >
         <img src={character.image} alt={character.name} />
       </div>
-      <div className={style.text}>
+      <div>
         <h1>{character.name}</h1>
         <h2>Status:</h2>
         <p>{character.status}</p>

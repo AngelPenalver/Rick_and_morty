@@ -2,7 +2,7 @@ import Card from '../Card/Card'
 import React from 'react';
 export default function Cards({ characters, onClose }) {
   return (
-    <div>
+    <div >
       {characters.map((character) => (
         <Card
           image={character.image}
@@ -10,7 +10,6 @@ export default function Cards({ characters, onClose }) {
           key={character.id}
           name={character.name}
           gender={character.gender}
-          
           onClose={() => onClose(character.id)}
         />
       ))}
