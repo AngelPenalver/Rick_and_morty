@@ -3,39 +3,44 @@ import Card from "../Card/Card"
 import useCharacters from '../SearchBar/onSearch/onSearch'
 import { useState } from "react";
 import { useDispatch } from 'react-redux';
-import { filterCards, orderCards,} from "../../redux/Action";
+import { filterCards, orderCards, } from "../../redux/Action";
+import style from './Favorites.module.css'
 function Favorites({ myFavorites }) {
   const dispatch = useDispatch()
   const [aux, setAux] = useState(false);
-  
+
   const { onClose } = useCharacters()
-  function handleOrder(event){
+  function handleOrder(event) {
     dispatch(orderCards(event.target.value))
-    
-    if(aux){
-    setAux(false)
-    }else{
+
+    if (aux) {
+      setAux(false)
+    } else {
       setAux(true)
     }
   }
   function handleFilter(event) {
     dispatch(filterCards(event.target.value));
-    
+
   }
-  
-  
+
+
   return (
     <div>
       <h1>Favoritos</h1>
-      <select name="" id="" onChange={handleOrder}><option value="A">Ascendente</option><option value="B">Descendente</option></select>
+      <div className={style.option}>
 
-      <select name="" id="" onChange={handleFilter}>
-    <option value="All">Todos</option>
-    <option value="Male">Male</option>
-    <option value="Female">Female</option>
-    <option value="Genderless">Genderless</option>
-    <option value="unknown">Unknown</option>
-</select>
+        <select name="" id="" onChange={handleOrder}><option value="A">Ascendente</option><option value="B">Descendente</option></select>
+
+        <select name="" id="" onChange={handleFilter}>
+          <option value="All">Todos</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Genderless">Genderless</option>
+          <option value="unknown">Unknown</option>
+
+        </select>
+      </div>
 
       {myFavorites.map((element) => (
         <Card
