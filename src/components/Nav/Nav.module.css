@@ -1,47 +1,49 @@
- 
-nav ul{
-  display: flex;
-  justify-content: space-around;
-  list-style: none;
-  top: 0;
-  left: 0;
-  
-  
-  right: 0;
-  
-}
-@font-face {
-  font-family: "MiFuente";
-  src: url(../Nav/fuente/Roboto/RobotoMono-Italic-VariableFont_wght.ttf);
-}
-  
+ nav ul {
+   display: flex;
+   justify-content: space-around;
+   list-style: none;
+   top: 0;
+   left: 0;
 
-.button{
-  padding: 7px 20px;
-  background-color: #999999;
- 
-  border: none;
-  
-  border-radius: 1px 2px;
-  font-family: 'MiFuente';
-  font-size: 15px;
-  cursor: pointer;
-}
-.button:hover {
-  box-shadow: 3px 4px 10px rgba(48, 35, 35, 0.25);
-  /* border: 7px rgba(32, 255, 62, 0.459) solid; */
-  background-color: #ffffffe8;
-  transform: scale(1.1);
-  
-  transition-duration:0.2s ;
-}
-.input{
-  /* width: 100%; */
-  padding: 6px 12px;
-  font-family: 'MiFuente';
-  font-size: 15px;
-  margin: 0px 8px;
-  box-sizing: border-box;
-  margin-right: 10px;
-  
-}
+
+   right: 0;
+
+ }
+
+ @font-face {
+   font-family: "MiFuente";
+   src: url(../Nav/fuente/Roboto/RobotoMono-Italic-VariableFont_wght.ttf);
+ }
+
+
+ .button {
+   padding: 7px 20px;
+   background-color: #999999;
+
+   border: none;
+
+   border-radius: 1px 2px;
+   font-family: 'MiFuente';
+   font-size: 15px;
+   cursor: pointer;
+ }
+
+ .button:hover {
+   box-shadow: 3px 4px 10px rgba(48, 35, 35, 0.25);
+   /* border: 7px rgba(32, 255, 62, 0.459) solid; */
+   background-color: #ffffffe8;
+   transform: scale(1.1);
+
+   transition-duration: 0.2s;
+ }
+
+ .input {
+   /* width: 100%; */
+   padding: 6px 12px;
+   font-family: 'MiFuente';
+   font-size: 15px;
+   margin: 0px 8px;
+   box-sizing: border-box;
+   margin-right: 10px;
+
+ }
