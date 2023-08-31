@@ -1,4 +1,5 @@
 import axios from "axios";
+import style from './Detail.module.css'
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 
@@ -19,12 +20,12 @@ const Detail = (props) => {
   }, [id]);
 
   return (
-    <div >
+    <div className={style.div}>
       {/* <NavLink to='/home' ><Nav onSearch={props.onSearch} /></NavLink> 5 */}
       <div >
-        <img src={character.image} alt={character.name} />
+        <img src={character.image} alt={character.name} className={style.imgDetail}/>
       </div>
-      <div>
+      <div className={style.detail}>
         <h1>{character.name}</h1>
         <h2>Status:</h2>
         <p>{character.status}</p>

@@ -1,0 +1,32 @@
+/* @font-face {
+    font-family: 'MiFuente';
+    src: url(../Nav/fuente/Roboto/RobotoMono-VariableFont_wght.ttf);
+} */
+.div{
+    display: flex; 
+    /* border: 5px white solid; */
+    justify-content:space-evenly;
+    background-color: rgba(255, 255, 255, 0.377);
+    align-items: center;
+}
+.imgDetail{
+    /* border: 1px red solid; */
+    padding: 20px;
+    width: 100%;
+}
+.detail{
+    font-family: "MiFuente";
+    color: black;
+    font-weight: 4000;
+    display:block;
+    width: 400px;
+    /* background-color: blueviolet; */
+    align-items: center;
+    height: auto;
+    /* border: 1px whit  e solid; */
+    /* margin: 10px; */
+    /* padding: 100px; */
+    /* justify-content: center; */
+    /* background-color: #69696979; */
+    /* color:saddlebrown    ; */
+}

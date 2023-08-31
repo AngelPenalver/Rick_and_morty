@@ -30,9 +30,9 @@ function Favorites({ myFavorites }) {
       <h1>Favoritos</h1>
       <div className={style.option}>
 
-        <select name="" id="" onChange={handleOrder}><option value="A">Ascendente</option><option value="B">Descendente</option></select>
+        <select name="" id="" onChange={handleOrder} className={style.select}><option value="A">Ascendente</option><option value="B">Descendente</option></select>
 
-        <select name="" id="" onChange={handleFilter}>
+        <select name="" id="" onChange={handleFilter} className={style.select}>
           <option value="All">Todos</option>
           <option value="Male">Male</option>
           <option value="Female">Female</option>
@@ -40,10 +40,12 @@ function Favorites({ myFavorites }) {
           <option value="unknown">Unknown</option>
 
         </select>
-      </div>
+      </div  >
+      <div className={style.div}>
 
       {myFavorites.map((element) => (
-        <Card
+      <div className={style.card}>
+        <Card className={style.card}
           image={element.image}
           id={element.id}
           key={element.id}
@@ -51,8 +53,12 @@ function Favorites({ myFavorites }) {
           gender={element.gender}
           onClose={() => onClose(element.id)}
         />
+      </div>
       ))}
     </div>
+
+      </div>
+        
   );
 }
 function mapStateToProps(state) {

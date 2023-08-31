@@ -7,6 +7,7 @@ import { useLocation } from "react-router-dom";
 import style from './Card.module.css'
 
 
+
 function Card({ name, id, species, gender, origin, status, image, onClose, dispatch, myFavorites }) {
   const location = useLocation();
   const [isFav, setIsFav] = useState(false);
@@ -28,23 +29,27 @@ function Card({ name, id, species, gender, origin, status, image, onClose, dispa
   }
   return (
     
-      <div className={style.div}>
-        {location.pathname !== '/Favorites' && <button onClick={onClose} style={style.close}>X</button>}
+    <div className={style.div}>
+      <div className={style.container}>
 
-      
       {isFav ? (
-        <button onClick={handleFavorite}>❤️</button>
+        <button onClick={handleFavorite} className={style.fav}>❤️</button>
       ) : (
-        <button onClick={handleFavorite}>🤍</button>
-      )}
-      <NavLink className="NavLink" to={`/detail/${id}`}>
+        <button onClick={handleFavorite} className={style.fav}>🤍</button>
+        )}
+        {location.pathname !== '/Favorites' && <button onClick={onClose} className={style.close}>❌</button>}
+      </div>
+
+        <NavLink className="NavLink" to={`/detail/${id}`}>
+          <img src={image} alt='' className={style.img} />
+      </NavLink>
+        <div className={style.NavLink} style={{textDecorationStyle:'none'}}>
           <h3>{name}</h3>
           <p>{species}</p>
           <p>{gender}</p>
           <p>{origin}</p>
           <p>{status}</p>
-          <img src={image} alt='' className={style.img} />
-      </NavLink>
+        </div>
       </div>
     
   )

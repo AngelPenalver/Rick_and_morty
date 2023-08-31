@@ -1,10 +1,14 @@
 import { useState } from "react";
 import axios from "axios";
+import { removeFav } from "../../../redux/Action";
+import { useDispatch } from "react-redux";
 
 export default function useCharacters() {
+    const dispatch = useDispatch()
     const [characters, setCharacters] = useState([]);
     const onClose = (id) => {
         setCharacters((oldChars) => oldChars.filter((char) => char.id !== parseInt(id)));
+        dispatch(removeFav(id))
     }
 
     const onSearch = (id) => {
