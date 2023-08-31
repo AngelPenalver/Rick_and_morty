@@ -9,8 +9,11 @@ export default function validar  (input) {
     if (input.email.length >= 35) {
         errores.email = 'El correo no puede tener mas de 35 caracteres'
     }
-    if (input.password.length < 6 || input.password.length > 10) {
-        errores.password = 'La contraseña debe estar entre 6 y 10 caracteres'
+    if (input.password.length < 6 ) {
+        errores.password = 'La contraseña debe tener mas de 6 caracteres'
+    }
+    if(!input.password){
+        errores.password = 'La constraseña no puede estar vacia'
     }
     return errores;
 }
