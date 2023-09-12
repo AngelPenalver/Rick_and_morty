@@ -1,5 +1,3 @@
-
-import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import image from './login.png'
 import validar from './validar/validar';
@@ -41,17 +39,17 @@ const Form = ({ login }) => {
             <img src={image} alt="" className={style.img} />
             <form>
                 <div className={style.form}>
+                    {errores.email && <span className={style.span}>{errores.email}</span>}
                     <label htmlFor='email' className={style.label}>Correo electronico</label>
                     <input placeholder="Correo electronico" name="email" onChange={handleChange}
                         value={userData.email} className={style.input} />
-                    {errores.email && <span className={style.span}>{errores.email}</span>}
                 </div>
                 <div className={style.form}>
 
+                    {errores.password && <span className={style.span}>{errores.password}</span>}
                     <label htmlFor='password' className={style.label}>Contraseña</label>
                     <input placeholder="Contraseña" name="password" onChange={handleChange} value={userData.password}
                         className={style.input} />
-                    {errores.password && <span className={style.span}>{errores.password}</span>}
                 </div>
                 {Object.keys(errores).length > 0 ? (
                     <button disabled onClick={handleSubmit} className={style.button1}>

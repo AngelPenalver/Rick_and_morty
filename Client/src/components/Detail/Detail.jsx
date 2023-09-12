@@ -21,7 +21,6 @@ const Detail = (props) => {
 
   return (
     <div className={style.div}>
-      {/* <NavLink to='/home' ><Nav onSearch={props.onSearch} /></NavLink> 5 */}
       <div >
         <img src={character.image} alt={character.name} className={style.imgDetail}/>
       </div>

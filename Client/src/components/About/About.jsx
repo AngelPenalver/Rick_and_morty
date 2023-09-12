@@ -10,7 +10,7 @@ function About() {
 
       <button className={style.button}>
         <a
-          href="https://www.linkedin.com/in/angel-pe%C3%B1alver-926bba268/https://www.linkedin.com/in/angel-pe%C3%B1alver-926bba268/"
+          href="https://www.linkedin.com/in/angel-pe%C3%B1alver-926bba268/"
           className={style.a}
           target="_blank"
           rel="noopener noreferrer"

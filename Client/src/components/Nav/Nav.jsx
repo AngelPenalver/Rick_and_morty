@@ -8,7 +8,7 @@ export default function Nav(props) {
         <li><NavLink to='/Home' ><button className={style.button}>Home</button></NavLink></li>
         <li><NavLink to='/About' ><button className={style.button}>About</button></NavLink></li>
         <li><SearchBar onSearch={props.onSearch} /></li>
-        <li><NavLink to='/Favorites'><button className={style.button}>Favorites</button></NavLink></li>
+        <li><NavLink to='/fav'><button className={style.button}>Favorites</button></NavLink></li>
         <li><NavLink to='/'><button className={style.button}>Cerrar sesion</button></NavLink></li>
       </ul>
     </nav>
