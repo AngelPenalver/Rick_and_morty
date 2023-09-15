@@ -3,6 +3,28 @@
     src: url(../Nav/fuente/Roboto/RobotoMono-VariableFont_wght.ttf);
 } */
 .div{
+    .div{
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .imgDetail{
+        padding: 20px;
+        width: 100%;
+        flex-basis: 50%;
+    }
+    
+    .detail{
+        font-family: "MiFuente";
+        color: black;
+        font-weight: 4000;
+        display:block;
+        width: 400px;
+        height: auto;
+    }
     display: flex; 
     /* border: 5px white solid; */
     justify-content:space-evenly;

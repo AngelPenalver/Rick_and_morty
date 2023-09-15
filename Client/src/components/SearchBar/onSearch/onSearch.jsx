@@ -10,6 +10,7 @@ export default function useCharacters() {
         setCharacters((oldChars) => oldChars.filter((char) => char.id !== id));
         dispatch(removeFav(id))
     }
+
     const onSearch = async (id) => {
         try {
             const { data } = await axios(`http://localhost:3001/rickandmorty/character/${id}`)

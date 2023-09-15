@@ -4,8 +4,8 @@ function About() {
   return (
     <div className={style.div}>
       <h2 className={style.h1}>
-        Bienvenidos a mi pagina, Soy un full stack graduado de SoyHenry y busco
-        trabajo como programador, aca abajo te dejo mis link de contactos.
+        Bienvenidos a mi pagina, soy un estudiante de Full Stack, actualmente estoy cursando el programa de Henry, donde estoy adquiriendo las herramientas necesarias para convertirme en un profesional competente y exitoso.
+        Mi objetivo es conseguir mi primer trabajo como desarrollador web, donde pueda aportar valor y seguir creciendo como profesional.
       </h2>
 
       <button className={style.button}>

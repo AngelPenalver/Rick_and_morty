@@ -28,11 +28,13 @@ function App() {
       const { access } = data;
       setAccess(data);
       access && navigate("/home");
+      !access && window.alert('Usuario o contraseña ingresado son incorrecto o no estan registrados') 
     } catch (error) {
       console.log(error.message);
     }
   }
   useEffect(() => {
+    
     !access && navigate("/");
   }, [access]);
   return (

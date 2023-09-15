@@ -1,8 +1,8 @@
 import Card from '../Card/Card';
-
 import React from 'react';
+
 export default function Cards({ characters, onClose }) {
-  
+
   return (
     <div >
       {characters.map((character) => (
@@ -11,7 +11,7 @@ export default function Cards({ characters, onClose }) {
           id={character.id}
           key={character.id}
           name={character.name}
-          gender={character.gender}          
+          gender={character.gender}
           onClose={() => onClose(character.id)}
         />
       ))}
