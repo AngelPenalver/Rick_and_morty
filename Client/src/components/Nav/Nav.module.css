@@ -1,6 +1,6 @@
  nav ul {
    display: flex;
-   justify-content: space-around;
+   justify-content: space-evenly;
    list-style: none;
    top: 0;
    left: 0;
@@ -27,6 +27,7 @@
    border-radius: 1px 2px;
    font-family: 'MiFuente';
    font-size: 15px;
+   transition: 0.4s;
    cursor: pointer;
  }
 
@@ -36,7 +37,7 @@
    background-color: #ffffffe8;
    transform: scale(1.1);
 
-   transition-duration: 0.2s;
+   transition-duration: 0.4s;
  }
 
  .input {

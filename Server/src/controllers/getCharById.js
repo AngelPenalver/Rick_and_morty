@@ -5,6 +5,7 @@ async function getCharById(req, res) {
     const { id } = req.params;
     const { data } = await axios(url + id);
     const { status, name, species, origin, image, gender, location } = data;
+    // console.log(origin)
     res.status(200).json({ id, status, name, species, origin, image, gender, location });
     if (!data) res.status(400).send("Not fount");
   } catch (error) {

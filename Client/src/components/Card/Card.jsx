@@ -16,8 +16,8 @@ function Card({ name, id, species, gender, origin, status, image, onClose, dispa
     });
   }, [myFavorites])
   function handleFavorite() {
-    setIsFav(false);
     dispatch(isFav ? removeFav(id) : addFav({ name, id, species, gender, origin, status, image }));
+    setIsFav(!isFav);
   }
   return (
     <div className={style.div}>
